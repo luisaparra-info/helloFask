@@ -7,21 +7,24 @@
     </head>
 
     <body>
-        <div class="navbar">
-            <a href="{{ url_for('home') }}" class="navbar-brand">Inicio</a>
-            <a href="{{ url_for('csimetrico') }}" class="navbar-item">C. Simétrico</a>
-            <a href="{{ url_for('casimetrico') }}" class="navbar-item">C. Asimétrico</a>
-            <a href="{{ url_for('about') }}" class="navbar-item">Nuestro Equipo</a>
-            <a href="{{ url_for('doc') }}" class="navbar-item">Documentación</a>
-        </div>
+        <header>
+            <nav class="navbar">
+                <a href="{{ url_for('home') }}" class="navbar-brand">Inicio</a>
+                <a href="{{ url_for('csimetrico') }}" class="navbar-item">C. Simétrico</a>
+                <a href="{{ url_for('casimetrico') }}" class="navbar-item">C. Asimétrico</a>
+                <a href="{{ url_for('about') }}" class="navbar-item">Nuestro Equipo</a>
+                <a href="{{ url_for('doc') }}" class="navbar-item">Documentación</a>
+                <a href="{{ url_for('otro') }}" class="navbar-item">Otro</a>
+            </nav>
+        </header>
 
-        <div class="body-content">
+        <main class="body-content">
             {% block content %}
             {% endblock %}
-            <hr/>
+            <hr />
             <footer>
-                <p>SAD - 2º ASIR - IES  &copy; 2023</p>
+                <p>SAD - 2º ASIR - IES &copy; 2023</p>
             </footer>
-        </div>
+        </main>
     </body>
 </html>
